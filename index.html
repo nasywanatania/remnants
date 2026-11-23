@@ -604,9 +604,21 @@
 
 <body>
   
-<audio autoplay loop>
+<audio id="backgroundMusic" loop>
   <source src="penantianberharga.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  const music = document.getElementById("backgroundMusic");
+
+  document.addEventListener("click", function startMusic() {
+    music.play();
+  }, { once: true });
+
+  document.addEventListener("touchstart", function startMusic() {
+    music.play();
+  }, { once: true });
+</script>
 
   <div class="floating one">🌷</div>
   <div class="floating two">♡</div>
