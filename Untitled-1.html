@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff3f3">
+  <title>Anugerah Terindah, Ada Untukmu ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Sacramento&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #f3b8c6;
+      --pink-light: #fff0f3;
+      --pink-dark: #d9859e;
+      --peach: #ffe0cf;
+      --cream: #fffaf1;
+      --lilac: #e9e0f8;
+      --brown: #765b60;
+      --text: #725b61;
+      --muted: #a58b91;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(166, 112, 129, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, #ffe4eb 0, transparent 25%),
+        radial-gradient(circle at 90% 30%, #f4e8ff 0, transparent 25%),
+        #fff9f5;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .22;
+      z-index: -1;
+      background-image: radial-gradient(#d9aeb8 0.7px, transparent 0.7px);
+      background-size: 18px 18px;
+    }
+
+    .floating {
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .65;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating.one {
+      top: 12%;
+      left: 4%;
+      font-size: 25px;
+    }
+
+    .floating.two {
+      top: 43%;
+      right: 4%;
+      font-size: 23px;
+      animation-delay: 1s;
+    }
+
+    .floating.three {
+      bottom: 12%;
+      left: 5%;
+      font-size: 22px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-12px) rotate(6deg); }
+    }
+
+    .container {
+      width: min(850px, 91%);
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+    }
+
+    .top-icons {
+      font-size: 27px;
+      letter-spacing: 15px;
+      margin-bottom: 25px;
+      animation: fadeDown 1s ease both;
+    }
+
+    .eyebrow {
+      color: var(--pink-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(43px, 8vw, 75px);
+      line-height: 1.15;
+      font-weight: 600;
+      color: #9d6878;
+      margin-bottom: 22px;
+      animation: fadeUp 1.2s ease both;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-style: italic;
+      color: #d58ca1;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      font-size: 14px;
+      line-height: 2;
+      color: #967b82;
+      animation: fadeUp 1.4s ease both;
+    }
+
+    .hero-stickers {
+      font-size: 34px;
+      margin: 28px 0;
+      letter-spacing: 8px;
+      animation: fadeUp 1.5s ease both;
+    }
+
+    .scroll-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 13px 22px;
+      border: 1px solid #f0c6d0;
+      border-radius: 30px;
+      color: #b77d8e;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transition: .3s;
+      animation: fadeUp 1.6s ease both;
+    }
+
+    .scroll-link:hover {
+      background: var(--pink-light);
+      transform: translateY(-3px);
+    }
+
+    .scroll-link span {
+      display: inline-block;
+      margin-left: 8px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(5px); }
+    }
+
+    .section {
+      padding: 65px 0;
+    }
+
+    .paper {
+      position: relative;
+      background: rgba(255,255,255,.88);
+      border: 1px solid #f3dce1;
+      border-radius: 12px 20px 14px 18px;
+      padding: clamp(25px, 6vw, 55px);
+      box-shadow: var(--shadow);
+      margin-bottom: 35px;
+    }
+
+    .paper::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      width: 95px;
+      height: 22px;
+      background: rgba(247, 207, 214, .75);
+      border-radius: 3px;
+    }
+
+    .paper.lilac::before {
+      background: rgba(218, 205, 242, .8);
+    }
+
+    .paper.peach::before {
+      background: rgba(255, 218, 195, .85);
+    }
+
+    .page-label {
+      color: #d08da0;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(29px, 5vw, 42px);
+      text-align: center;
+      color: #986b79;
+      margin-bottom: 17px;
+      font-weight: 600;
+    }
+
+    .intro {
+      max-width: 570px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 0 auto 35px;
+    }
+
+    .story-text {
+      font-size: 14px;
+      line-height: 2.15;
+      color: #806a70;
+      text-align: justify;
+    }
+
+    .story-text p {
+      margin-bottom: 22px;
+    }
+
+    .highlight-quote {
+      margin: 35px auto 5px;
+      padding: 22px;
+      max-width: 550px;
+      background: #fff2f4;
+      border-radius: 12px;
+      text-align: center;
+      color: #b5798c;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .quote-decoration {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .memory-card {
+      background: #fff8f4;
+      border: 1px solid #f5e5e4;
+      border-radius: 15px;
+      padding: 25px 21px;
+      transition: .3s;
+    }
+
+    .memory-card:nth-child(2) {
+      background: #f9f5ff;
+      border-color: #ece2f6;
+    }
+
+    .memory-card:nth-child(3) {
+      background: #fff4f1;
+    }
+
+    .memory-card:nth-child(4) {
+      background: #fff4f7;
+    }
+
+    .memory-card:hover {
+      transform: translateY(-5px) rotate(-1deg);
+      box-shadow: var(--shadow);
+    }
+
+    .memory-icon {
+      font-size: 27px;
+      margin-bottom: 13px;
+    }
+
+    .memory-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #a16f7e;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .memory-card p {
+      color: #927b80;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .small-note {
+      text-align: center;
+      color: #c08b9a;
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-top: 35px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 620px;
+      margin: 35px auto 0;
+      padding-left: 27px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 10px;
+      width: 2px;
+      background: #efd1d9;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 30px 20px;
+    }
+
+    .timeline-item::before {
+      content: "♡";
+      position: absolute;
+      left: -29px;
+      top: 0;
+      width: 19px;
+      height: 19px;
+      background: #fff0f3;
+      border: 1px solid #e8b8c5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #d58ca1;
+    }
+
+    .timeline-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #a16f7e;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #927b80;
+    }
+
+    .letter {
+      background: #fff9f1;
+      border: 1px dashed #e9c9bc;
+      padding: clamp(25px, 5vw, 42px);
+      border-radius: 5px;
+      position: relative;
+      transform: rotate(-.3deg);
+    }
+
+    .letter::after {
+      content: "💌";
+      position: absolute;
+      right: 20px;
+      top: -20px;
+      font-size: 30px;
+      transform: rotate(10deg);
+    }
+
+    .letter p {
+      font-size: 13px;
+      line-height: 2.15;
+      text-align: justify;
+      color: #806b6d;
+      margin-bottom: 20px;
+    }
+
+    .signature {
+      font-family: 'Sacramento', cursive;
+      font-size: 31px;
+      color: #c17f93;
+      text-align: right;
+      margin-top: 25px;
+    }
+
+    .story-card {
+      background: #fff8f5;
+      border: 1px solid #f3e0df;
+      border-radius: 15px;
+      padding: 24px;
+      margin: 17px 0;
+      transition: .3s;
+    }
+
+    .story-card:nth-of-type(even) {
+      background: #faf6ff;
+      border-color: #eae1f4;
+    }
+
+    .story-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .story-icon {
+      font-size: 26px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .story-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #a16f7e;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .story-card p {
+      color: #927b80;
+      font-size: 13px;
+      line-height: 2;
+      text-align: justify;
+    }
+
+    .story-quote {
+      background: #fff0f3;
+      border-left: 3px solid #e5aabb;
+      padding: 23px;
+      margin: 30px 0 15px;
+      border-radius: 8px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.8;
+      text-align: center;
+      color: #ae7888;
+    }
+
+    .little-ending {
+      text-align: center;
+      margin-top: 32px;
+      color: #c18b9a;
+    }
+
+    .little-ending span {
+      font-size: 26px;
+    }
+
+    .little-ending p {
+      font-family: 'Sacramento', cursive;
+      font-size: 27px;
+      margin-top: 7px;
+    }
+
+    .final-page {
+      text-align: center;
+      padding: 70px 25px;
+      background: linear-gradient(140deg, #fff1f4, #fff9f0, #f5efff);
+      border-radius: 20px;
+      border: 1px solid #f2dfe4;
+      box-shadow: var(--shadow);
+      margin: 65px 0 40px;
+    }
+
+    .final-page .flower {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .final-page h2 {
+      font-size: clamp(34px, 7vw, 53px);
+      line-height: 1.35;
+      color: #b77c90;
+    }
+
+    .final-page p {
+      max-width: 530px;
+      margin: 20px auto;
+      font-size: 13px;
+      line-height: 2;
+      color: #947b83;
+    }
+
+    .final-heart {
+      font-size: 29px;
+      margin-top: 20px;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      15% { transform: scale(1.15); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.12); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px 45px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: #b99ca2;
+      line-height: 2;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 92vh;
+      }
+
+      .memory-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 38px 0;
+      }
+
+      .paper {
+        padding: 28px 22px;
+      }
+
+      .story-text {
+        text-align: left;
+        font-size: 13px;
+      }
+
+      .letter p,
+      .story-card p {
+        text-align: left;
+      }
+
+      .highlight-quote,
+      .story-quote {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <audio autoplay loop>
+  <source src="penantianberharga.mp3" type="audio/mpeg">
+</audio>
+
+  <div class="floating one">🌷</div>
+  <div class="floating two">♡</div>
+  <div class="floating three">🍓</div>
+
+  <!-- COVER -->
+  <header class="hero">
+    <div class="top-icons">🕊️💌🥀</div>
+
+    <div class="eyebrow">it was over for real</div>
+
+    <div class="eyebrow">everything about us and its remnants</div>
+
+    <p class="hero-description" style="margin-bottom: 20px;">
+      a page scrapbook 
+    </p>
+
+    <h1>
+      The right one 
+      <span>will show up in time.</span>
+    </h1>
+
+    <p class="hero-description">
+      Ternyata, aku bukan satu satunya yang memahami kisah ini. 
+      </p>
+
+    <p class="hero-description">
+      Hal-hal yang tinggal, bukan selalu bersama, melainkan tentang hal sederhana yang diam-diam memiliki arti.
+     </p>
+
+    <p class="hero-description">  
+      Meski kita di jalan yang berbeda, dua potong musim dirimu selalu ada. 
+    </p>
+    
+    <p class="hero-description">
+      Meski hidup punya jalannya sendiri.
+      Aku ingin dia di sini, bukan yang lain, walau perbedaan mengiringi.
+    </p>
+
+    <p class="hero-description"> 
+      Bukan memaksa, sebab sedari awal aku tidak pernah menuntut kemana kisah ini akan bermuara. 
+      Aku hanya tahu satu hal, aku mencintainya.
+    </p>
+
+    <div class="hero-stickers">🌼 🧸 💗</div>
+
+    <a href="#page-one" class="scroll-link">
+      BUKA HALAMAN INI PELAN-PELAN
+      <span>⌄</span>
+    </a>
+  </header>
+
+  <main class="container">
+
+    <!-- PAGE ONE -->
+    <section class="section reveal" id="page-one">
+      <div class="paper">
+        <div class="page-label">let time tell</div>
+
+        <h2>I let that faith</h2>
+
+        <p class="intro">
+          If it's written for us, time will find its way. Until then, may we both become better versions of ourselves.
+        </p>
+
+        <div class="story-text">
+          <p>
+            Dan meski aku terus memutar lagu cinta berulang kali, 
+            aku tahu bahwa kita tidak akan pernah bersatu kembali.
+            Sulit membawa sesuatu yang rumit seperti cinta sendirian.
+            Dan mengetahui bahwa kamu tidak menemaninya, benar-benar menghancurkan hatiku. 
+          </p>
+
+          <p>
+            Jujur, aku takut menghadapi dunia yang kejam dan gila ini sendirian lagi,
+            tapi itu lebih baik daripada terjebak dengan seseorang yang bahkan tidak merasakan apa-apa dengan detak jantungnya.
+          </p>
+
+          <p>
+            Tentang "Yang tepat akan muncul tepat waktu," aku membiarkan kepercayaan itu tumbuh di hatiku.
+            Kita meninggalkan kita, segala tentang kita dan sisa-sisanya. 
+          </p>
+
+          <p>
+            Namun menariknya, salah satu bagian paling manis dari kisah
+            ini adalah mengetahui bahwa ternyata bukan hanya satu
+            orang yang mengingat. Di antara waktu yang panjang dan
+            banyak perubahan, ada dua insan yang masih mengenali,
+            masih mengingat, dan masih bisa menyebut nama nama itu dengan akrab.
+          </p>
+        </div>
+
+        <div class="highlight-quote">
+          “Ternyata, aku bukan satu-satunya yang mengingat.”
+        </div>
+
+        <div class="quote-decoration">🌷 ♡ 🌷</div>
+      </div>
+    </section>
+
+    <!-- PAGE TWO -->
+    <section class="section reveal" id="page-two">
+      <div class="paper lilac">
+        <div class="page-label">little things</div>
+
+        <h2>Hal-hal yang tinggal</h2>
+
+        <p class="intro">
+          Tidak beriringan serta tanpa bicara. Namun, diam-diam tetap berharap segala hal baik menyertainya.
+        </p>
+
+        <div class="memory-grid">
+
+          <div class="memory-card">
+            <h3>Masih diingat</h3>
+            <p>
+              Mungkin waktu berjalan jauh, namun ada hal-hal yang masih tersimpan meski hanya dalam ingatan. 
+            </p>
+          </div>
+
+          <div class="memory-card">
+            <h3>Empati</h3>
+            <p>
+              Ketika mendengar kabarnya tidak baik-baik
+              saja, hati ikut berat. Ada sedih yang muncul, bukan karena
+              ingin mengatur hidupnya. Sungguh, hanya sebatas ingin melihat binar matanya, seindah pelangi di jiwaku. 
+            </p>
+          </div>
+
+          <div class="memory-card">
+            <h3>Ingin alam berpihak padanya</h3>
+            <p>
+              Jika dia sedang lelah, menghadapi masalah, bahkan kecewa
+              pada dirinya sendiri, rasanya ingin mengingatkan bahwa
+              dia tetap manusia yang layak bertumbuh, belajar,
+              dan memperbaiki keadaan.
+            </p>
+          </div>
+
+          <div class="memory-card">
+            <h3>Terima kasih sudah ada</h3>
+            <p>
+              Bantuan, sapaan, bahkan kesediaannya untuk
+              mendengarkan bisa terasa berarti.
+              Kesederhanaannya yang menarik, membuat hati perlahan ingin menghargainya.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="highlight-quote">
+          “Aku mungkin tidak selalu tahu apa yang sedang kamu lalui. 
+          Namun, setiap kali mendengar kamu bicara tidak baik-baik saja, ada bagian dari hatiku yang ikut terluka.”
+        </div>
+
+        <div class="small-note">Terima kasih sudah menunjukkan siapa dirimu, aku menerima kamy apa adanya, baik buruknya akuk terima, apapun keadaannya ♡</div>
+      </div>
+    </section>
+
+    <!-- PAGE THREE -->
+    <section class="section reveal" id="page-three">
+      <div class="paper peach">
+        <div class="page-label">Setiap musim</div>
+
+        <h2>Selalu ada dalam ingatan</h2>
+
+        <p class="intro">
+          Potongan-potongan musim, satu benang merah.        </p>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <h3>Masa sekolah.</h3>
+            <p>
+              Dua anak remaja yang belum tahu akan tumbuh menjadi siapa.
+              Ada rasa kagum, rasa malu, dan awal cerita yang sederhana.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Bertumbuh.</h3>
+            <p>
+              Hari-hari dipenuhi sekolah, kuliah, pekerjaan,
+              teman-teman, dan cita-cita. Tidak semua kabar dibagikan,
+              tetapi keadaan terus mengajarkan banyak hal.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Berjauhan.</h3>
+            <p>
+              Ada masa tanpa percakapan. Bukan berarti semua yang
+              pernah ada harus dilupakan. Kadang seseorang tetap
+              menjadi bagian meski tidak hadir
+              dalam keseharian. Beberapa orang menyebutnya pendewasaan.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Menyapa, lagi.</h3>
+            <p>
+              Percakapan yang kembali ada, lagi dan lagi, belum habis masanya, aku berharap tidak akan pernah habis, sesungguhnya.
+              Ada kejutan kecil, ketika mengetahui bahwa ingatan
+              itu ternyata masih ada di kedua sisi. Tidak semua
+              hal harus langsung diberi nama. Cukup syukuri
+              kesempatan untuk saling mengenal kembali dengan
+              versi diri yang sekarang.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="quote-decoration">🌸</div>
+      </div>
+    </section>
+
+    <!-- PAGE FOUR -->
+    <section class="section reveal" id="page-four">
+      <div class="paper">
+        <div class="page-label">an unsent letter</div>
+
+        <h2>Izinkanku menitipkan pesan meski hanya satu kata saja</h2>
+
+        <p class="intro">
+          Kepada seseorang yang apa adanya.
+        </p>
+
+        <div class="letter">
+          <p>
+            Kekhawatiran ketika mendengar kamu tidak baik saja itu menyakitkanku, 
+            ada harapan semoga takdir membalikkan arahmu, 
+            setidaknya kepadaNya. Melihatmu kembali padaNya, 
+            menyejukkan, juga mengejutkan, pun siapa sangka. 
+            Ada banyak hal yang akhirnya cukup kusimpan di sini. 
+            Bukan karena tak ingin disampaikan, 
+            tetapi karena tidak semua perasaan harus sampai kepada pemiliknya.
+          </p>
+
+          <p>
+            Aku juga ingin berterima kasih karena ternyata kamu masih
+            mengingat dan peduli padaku. Setelah waktu yang panjang, mengetahui bahwa
+            aku tidak sepenuhnya terlupakan adalah hal yang
+            membuat hati hangat. Terima kasih untuk sapaan, bantuan,
+            dan kebaikan yang bagimu sederhana itu.
+          </p>
+
+          <p>
+            Aku tidak tahu bagaimana kelanjutan cerita ini. Aku tidak
+            ingin membuat harapan menjadi beban. Aku hanya ingin kita
+            sama-sama tumbuh menjadi pribadi yang lebih baik. Semoga
+            Allah menjaga langkahmu, menguatkanmu dalam hal-hal yang
+            sedang kamu perjuangkan, dan selalu membawamu pulang
+            kepada kebaikan.
+          </p>
+
+          <p>
+            Semoga kedua orang tua dan keluargamu juga selalu diberi
+            kesehatan, perlindungan, ketenangan, serta keberkahan.
+            Semoga rumahmu dipenuhi kabar baik dan hati yang tenteram.
+          </p>
+
+          <div class="signature">
+            seseorang yang selalu mendoakan ♡
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE FIVE -->
+    <section class="section reveal" id="page-five">
+      <div class="paper lilac">
+        <div class="page-label">
+          the little things I never said
+        </div>
+
+        <h2>Hal-hal yang tak selalu terucap</h2>
+
+        <p class="intro">
+          Ada perasaan yang tidak harus selalu disampaikan,
+          tetapi tetap bisa tumbuh dalam bentuk perhatian dan doa.
+        </p>
+
+        <div class="story-card">
+          <span class="story-icon">🌷</span>
+          <p>
+            Lucu itu ketika, seseorang yang hanya pernah bersinggungan, ketika masih
+            berseragam sekolah ternyata tetap bisa menjadi bagian
+            dari cerita, setelah bertahun-tahun berlalu. Aku bersyukur
+            karena waktu pernah menghubungkan kita, dan lebih
+            bersyukur lagi saat menyadari jika dirimu memulai percakapan itu, dan disambung ternyata ingatan-ingatan kisah itu masih tersimpan.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <span class="story-icon">☁️</span>
+          <p>
+            Mungkin aku tidak selalu tahu apa yang sedang kamu pikirkan,
+            apa yang sedang kamu perjuangkan, atau hal apa yang membuatmu
+            merasa lelah. Namun, setiap mendengar kamu sedang tidak
+            baik-baik saja, ada bagian dari hatiku yang ikut merasa sedih.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <span class="story-icon">🧸</span>
+          <p>
+            Aku ingin kamu bisa menjalani hari-harimu dengan lebih tenang.
+            Tidak harus menjadi manusia yang sempurna, cukup terus belajar,
+            berani memperbaiki kesalahan, dan tidak menyerah untuk menjadi
+            pribadi yang lebih baik dari hari kemarin. Aku ingin bersamamu, sungguh.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <span class="story-icon">💌</span>
+          <p>
+            Terima kasih karena pernah hadir kembali dalam percakapan
+            sederhana. Karna masih mempedulikan beberapa hal.
+          </p>
+        </div>
+
+        <blockquote class="story-quote">
+          “Pada akhirnya, aku hanya ingin kamu baik-baik saja,
+          tumbuh dengan baik, dan selalu menemukan jalan pulang
+          menuju kebaikan.”
+        </blockquote>
+
+        <div class="little-ending">
+          <span>♡</span>
+          <p>some feelings are best kept in prayers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAST PAGE -->
+    <section class="final-page reveal" id="last-page">
+      <div class="flower">🌷 🍓 🌷</div>
+
+      <div class="page-label">last page · for all the seasons</div>
+
+      <h2>
+        Hingga aku sampai pada satu pengakuan<br>
+        bahwa aku, mencintaimu. Dan mungkin tidak ada jalan lain selain terus mencintaimu ♡
+      </h2>
+
+      <p>
+        Toh, tidak ada yang berjanji bahwa cinta akan selalu manis, dan saling memiliki.
+        Bagaimana banyak orang bisa melalui kehilangan?
+        Mungkin mereka tidak benar-benar melaluinya. Mungkin mereka membawa
+        kepingan itu kemanapun mereka pergi.
+      </p>
+
+      <div class="final-heart">💗</div>
+    </section>
+
+  </main>
+
+  <footer>
+    Bahagia melihat binar matanya, indah bagai pelangi di jiwaku· ♡
+    <br>
+    <span>🌼 a story, kept gently · Arti semestinya cinta🌼</span>
+  </footer>
+
+  <script>
+    // Animasi elemen ketika halaman mulai terlihat
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    document.querySelectorAll('.reveal').forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+
+</body>
+</html>
